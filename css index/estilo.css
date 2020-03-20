@@ -1,6 +1,6 @@
 body {
 
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(148, 148, 148));
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(122, 122, 122));
 }
 
 
@@ -136,6 +136,7 @@ body{
   width: 100%;  
   padding-left: 1rem;
   padding-right: 1rem;
+  
   
   order: 1;
   margin: auto;
