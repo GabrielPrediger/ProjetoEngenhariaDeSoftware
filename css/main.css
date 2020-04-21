@@ -102,6 +102,7 @@
   }
   .form-row .name {
     margin-bottom: 7px;
+
   }
 }
 
@@ -323,10 +324,13 @@ h6 {
 
 .p-t-20 {
   padding-top: 20px;
-}
 
+}
+/* Sim ou nao edit */
 .p-t-15 {
-  padding-top: 15px;
+  padding-bottom: 8px;
+  padding-left: 150px;
+  position: absolute;
 }
 
 .p-t-10 {
@@ -434,7 +438,7 @@ h6 {
 }
 
 .btn--red {
-  background: #ff4b5a;
+  background: #000000;
 }
 
 .btn--red:hover {
@@ -494,7 +498,7 @@ input[type="date" i] {
 /* ==========================================================================
    #FORM
    ========================================================================== */
-input {
+input, textarea {
   outline: none;
   margin: 0;
   border: none;
@@ -506,10 +510,15 @@ input {
   font-family: inherit;
 }
 
+textarea.input--style-5 {
+  line-height: 1.5rem;
+  padding: 15px 22px;
+}
+
 .radio-container {
   display: inline-block;
   position: relative;
-  padding-left: 30px;
+  padding-left: 100px;
   cursor: pointer;
   font-size: 16px;
   color: #666;
@@ -535,7 +544,7 @@ input {
 
 .radio-container .checkmark:after {
   top: 50%;
-  left: 50%;
+  left: 400%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -601,10 +610,13 @@ input {
   margin: 0;
 }
 
+/* Edita o cliente com emergencia */
 .label {
   color: #555;
   font-size: 15px;
   font-weight: 700;
+  padding-right: 488px;
+  padding-bottom: 15px;
 }
 
 .label--block {
