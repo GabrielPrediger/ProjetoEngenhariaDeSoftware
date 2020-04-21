@@ -6,7 +6,7 @@ var clock = new Vue({
     }
 });
 
-var week = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB'];
+var week = ['DOMINGO', 'SEGUNDA', 'TERÇA', 'QUARTA', 'QUINTA', 'SEXTA', 'SABADO'];
 var timerID = setInterval(updateTime, 1000);
 updateTime();
 function updateTime() {

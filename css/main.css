@@ -27,6 +27,14 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+/* Estilo placeholder*/
+::placeholder {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+::selected {
+  color: #0aafe6;
+}
 
 .row .col-2:last-child .input-group-desc {
   margin-bottom: 0;
@@ -436,13 +444,17 @@ h6 {
 .btn--blue:hover {
   background: #3868cd;
 }
-
+/* CONFIG COLOR BOTAO*/
 .btn--red {
   background: #000000;
 }
-
+/* CONFIG COLOR BOTAO*/
 .btn--red:hover {
-  background: #eb3746;
+  background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#004777));
+  background: -webkit-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+  background: -moz-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+  background: -o-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+  background: linear-gradient(to top right, #08aeea 0%, #004777 100%);
 }
 
 /* ==========================================================================
