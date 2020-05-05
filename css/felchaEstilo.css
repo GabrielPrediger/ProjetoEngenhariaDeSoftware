@@ -1,0 +1,11 @@
+
+body{
+    background: -webkit-gradient(linear, left bottom, right top, from(#08aeea), to(#004777));
+    background: -webkit-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+    background: -moz-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+    background: -o-linear-gradient(bottom left, #08aeea 0%, #004777 100%);
+    background: linear-gradient(to top right, #08aeea 0%, #004777 100%);
+    text-align: center;
+    top: 35px;
+    position: relative;
+}

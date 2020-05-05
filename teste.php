@@ -5,6 +5,7 @@
 	//print_r(DB::consult('select * from clientes'));
 	$cliente = DB::consult('select * from clientes where cliente_id = :cliente_id', ['cliente_id' => 1]);
 	print_r($cliente);
+	
 	$paramsInsert = [
 		'nome' => 'asd',
 		'cpf' => 'asd',
@@ -35,3 +36,4 @@
 	print_r(DB::delete('clientes', $paramsDelete));
 	
 	echo '<br>Fim';
+?>

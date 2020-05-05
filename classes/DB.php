@@ -9,6 +9,7 @@
 		
 		private static $conn = null;
 		
+		
 		private final function __construct()
 		{
 		}
@@ -19,6 +20,7 @@
 		
 		private static final function getInstance()
 		{
+			
 			if (!isset(self::$conn)) {
 				$dsn = 'mysql:host=' . self::HOST . ';dbname=' . self::DB_NAME . ';charset=utf8';
 				$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
