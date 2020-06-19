@@ -1,0 +1,152 @@
+body {
+
+  background: -webkit-gradient(linear, left bottom, right top, from(#2ca9fc), to(#004777));
+  background: -webkit-linear-gradient(bottom left, #2ca9fc 0%, #004777 100%);
+  background: -moz-linear-gradient(bottom left, #2ca9fc 0%, #004777 100%);
+  background: -o-linear-gradient(bottom left, #2ca9fc 0%, #004777 100%);
+  background: linear-gradient(to top right, #2ca9fc 0%, #004777 100%);
+
+}
+
+
+/* 
+=====
+Efeito FADING OUT quando seleciona uma das opções
+=====
+*/
+
+.menu:hover .menu__link:not(:hover){
+  color: #022336;
+}
+
+/* 
+=====
+MENU ESTILOS
+=====
+*/
+
+/* core styles */
+
+.menu__list{
+  display: flex;  
+  text-align: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;  
+}
+
+.menu__group{
+  flex-grow: 1;
+}
+
+.menu__link{
+  display: block;
+}
+
+/* cor */
+
+.menu{
+  background: -webkit-gradient(linear, left bottom, right top, from(#004777), to(#022336));
+  background: -webkit-linear-gradient(bottom left, #004777 0%, #022336 100%);
+  background: -moz-linear-gradient(bottom left, #004777 0%, #022336 100%);
+  background: -o-linear-gradient(bottom left, #004777 0%, #022336 100%);
+  background: linear-gradient(to top right, #004777 0%, #022336 100%);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+}
+
+.menu__link{
+  padding: 2rem 1.5rem;
+
+  font-weight: 700;
+  color: rgb(196, 196, 196);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* states */
+.menu__link:focus{
+  outline: 2px solid rgb(0, 0, 0);
+}
+
+/* hover animation */
+
+.menu__link{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+
+.menu__link::before, 
+.menu__link::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color:#017dcf;
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.menu__link::before{
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.menu__link::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+
+.menu__link:hover::before, 
+.menu__link:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+
+/*
+=====
+DEMO
+=====
+*/
+
+@media (min-width: 768px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 767px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;  
+  flex-direction: column;
+}
+
+.page{
+  box-sizing: border-box;
+  max-width: 640px;
+  width: 100%;  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  
+  order: 1;
+  margin: auto;
+}
+
