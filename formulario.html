@@ -25,8 +25,8 @@
     <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <body>
-    <a href="index.html">
-        <img class="fle"  src="./images/flechaVolta.png" alt="Italian Trulli" style="width: 40px;">
+    <a class="eff" href="inicioRelogio.html">
+        <img class="fle"  src="./images/flechaVolta.png" alt="Voltar Menu" style="width: 40px;">
     </a>
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
@@ -42,14 +42,14 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
-                                            <label class="label--desc">primeiro nome</label>
+                                            <input class="input--style-5" type="text" name="nome" placeholder="Nome" required minlength="3">
+                                            <label class="label--desc"></label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
-                                            <label class="label--desc">ultimo nome</label>
+                                            <input class="input--style-5" type="text" name="sobrenome" placeholder="Sobrenome" required>
+                                            <label class="label--desc"></label>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                             <div class="name">CPF</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="cpf" type="cpf" name="cpf">
+                                    <input class="input--style-5" type="cpf" name="cpf" id="cpf" placeholder="Ex.: 000.000.000-00" required minlength="11">
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
+                                    <input class="input--style-5" type="email" name="email" placeholder="Ex: email@hotmail.com" required minlength="4">
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                             <div class="name">Data de Nascimento</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="date" type="date" name="date">
+                                    <input class="input--style-5" type="text" name="campoData" id="campoData" placeholder="Ex: 31/12/2000" required>
                                 </div>
                             </div>
                         </div>
@@ -83,16 +83,10 @@
                             <div class="name">Telefone</div>
                             <div class="value">
                                 <div class="row row-refine">
-                                    <div class="col-3">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area_code">
-                                            <label class="label--desc">Codigo de Area</label>
-                                        </div>
-                                    </div>
                                     <div class="col-9">
                                         <div class="input-group-desc">
-                                            <input class="input[name=phone]" type="input[name=phone]" name="input[name=phone]">
-                                            <label class="label--desc">Telefone</label>
+                                            <input class="input--style-5" type="text" name="campoTelefone" id="campoTelefone" placeholder="Ex (54) 9 1234-5678" required minlength="11">
+                                            <label class="label--desc"></label>
                                         </div>
                                     </div>
                                 </div>
@@ -107,7 +101,7 @@
                                             <option disabled="disabled" selected="selected">Sexo</option>
                                             <option value="M">Masculino</option>
                                             <option value="F">Feminino</option>
-                                            <option value="N">NDC</option>    
+                                            <option value="N">Outro</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -115,7 +109,7 @@
                             </div>
                         </div>
                         <div class="form-row p-t-20">
-                            <label class="label label--block">Cliente com emergencia?</label>
+                            <label class="label label--block">Cliente com </br>emergencia?</label>
                             <div class="p-t-15">
                                 <label class="radio-container m-r-55">Sim
                                     <input type="radio" checked="checked" name="exist" value="S">
@@ -131,12 +125,12 @@
                             <div class="name">Detalhar assunto ou<br>problema</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="input--style-5" type="det" name="det" rows="5"></textarea>
+                                    <textarea class="input--style-5" type="det" name="det" rows="5" placeholder="Detatalhe aqui..." required ></textarea>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" type="submit" >Register</button>
                         </div>
                     </form>
                 </div>
@@ -164,11 +158,10 @@
                     field.mask(foneMaskBehavior.apply({}, arguments), options);
                 }
             };
+            $("#campoData").mask("99/99/9999");
+            $("#cpf").mask("000.000.000-00");
+            $("#campoTelefone").mask("(99) 9 9999-9999");
 
-            $('.date').mask("00/00/0000", {placeholder: "__/__/____"});
-            //$('.time').mask('00:00:00');
-            $('.cpf').mask('000.000.000-00', {reverse: true, placeholder: "___.___.___-__"});
-            $('input[name=phone]').mask(foneMaskBehavior, foneOptions);
         });
     </script>
 </body>

@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>Inicio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'><link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Share+Tech+Mono'><link rel="stylesheet" href="css/style.css">
+
+  <div class="img-container">
+    <a href="inicioRelogio.html">
+      <img class="home"  src="./images/3.png" alt="Formulario" >
+    </a>
+    <a href="formulario.html">
+      <img class="formulario"  src="./images/1.png" alt="Home">
+    </a>
+    <a href="DB.php">
+      <img class="consultar"  src="./images/2.png" alt="Consultar" >
+    </a>
+  </div>
+
 
 </head>
 <body>
-  <div class="page">
-    <nav class="menu">
-      <ul class="menu__list">
-        <li class="menu__group"><a href="index.html" class="menu__link">Menu</a></li>
-      </ul>
-    </nav>
-  </div>
+
   <div id="clock">
     <p class="date">{{ date }}</p>
     <p class="time">{{ time }}</p>
